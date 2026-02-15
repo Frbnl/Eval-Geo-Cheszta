@@ -1,0 +1,453 @@
+/* ========== Frbnl's STANDARDIZED CITY CSS/STYLE ========== */
+/* ========== MADE & FIRST APPLIED ON 07-11-2025 ========== */
+
+:root {
+  --warna-utama: rgb(7, 28, 83);
+  --warna-latar: #ffffff;
+  --warna-teks: #141414;
+  --warna-teks-balik: #ffffff;
+  --warna-mute: rgb(120, 120, 120);
+  --warna-judul: gold;
+}
+
+body {
+  margin: 0;
+  font-family: manrope, playfair;
+  color: var(--warna-teks);
+  background: var(--warna-latar);
+  line-height: 1.6;
+}
+/* ========== HERO SECTION ========== */
+.bagian-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+}
+
+.hero-teks {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-judul {
+  font-family: playfair;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-subjudul {
+  font-family: manrope;
+  font-size: 1.1rem;
+}
+
+/* ========== PAGE TITLE ========== */
+.judul-halaman {
+  text-align: center;
+  margin-top: 19vh;
+  line-height: 20px;
+}
+
+.judul-halaman h3 {
+  color: var(--warna-utama);
+  font-family: manrope;
+}
+
+.judul-destinasi {
+  font-size: 4rem;
+  font-family: playfair;
+  color: var(--warna-judul);
+  position: relative;
+}
+.judul-destinasi::before, .judul-destinasi::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 22%;
+  background: #1d2c44;
+  border-radius: 2px;
+  top: 100%;
+}
+.judul-destinasi::before {
+  left: 10%;
+}
+.judul-destinasi::after {
+  right: 10%;
+}
+/* ========== INTRO SECTION ========== */
+.bagian-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 100px 10%;
+  align-items: center;
+}
+.intro-teks h2 {
+  font-family: playfair;
+  font-size: 3.5em;
+  color: var(--warna-utama);
+  margin-bottom: 20px;
+}
+.intro-teks p {
+  font-family: manrope;
+  color: var(--warna-teks);
+}
+
+.intro-sumber {
+  color: var(--warna-mute);
+  margin-top: 1rem;
+}
+
+.intro-sumber a {
+  color: var(--warna-mute);
+  text-decoration: none;
+}
+
+.intro-gambar img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== DESTINASI ========== */
+.bagian-destinasi {
+  background: #f8f8f8;
+  padding: 80px 10%;
+}
+
+.judul-bagian {
+  text-align: center;
+  font-family: playfair;
+  font-size: 3rem;
+  color: var(--warna-utama);
+  margin-bottom: 50px;
+}
+
+.grid-destinasi {
+  margin: 100px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.kartu-destinasi {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.kartu-destinasi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.kartu-destinasi:hover img {
+  transform: scale(1.02);
+}
+
+.kartu-destinasi::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+}
+
+.info-destinasi {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 20px;
+  z-index: 2;
+}
+
+.judul-tempat {
+  font-family: playfair;
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+}
+
+.teks-deskripsi {
+  font-family: manrope;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.kartu-destinasi.besar { 
+  grid-row: span 2; 
+}
+.kartu-destinasi.lebar { 
+  grid-column: span 2; 
+  max-height: 370px;
+}
+
+/* ========== BUDAYA ========== */
+.bagian-budaya {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.budaya-teks {
+  flex: 1;
+}
+
+.judul-budaya {
+  font-family: playfair;
+  font-size: 3.5rem;
+  color: var(--warna-utama);
+  margin-bottom: 20px;
+}
+
+.teks-budaya {
+  font-family: manrope;
+  color: var(--warna-teks);
+  line-height: 1.7;
+}
+
+.budaya-gambar {
+  flex: 1;
+}
+
+.budaya-gambar img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== TRANSPORTASI ========== */
+.bagian-transport {
+  padding: 80px 10%;
+  background: #fafafa;
+  text-align: center;
+}
+
+.subjudul-bagian {
+  color: var(--warna-mute);
+  margin-bottom: 40px;
+}
+
+.grid-transport {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.kartu-transport {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-transport:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.kartu-transport img {
+  width: 100%;
+  height: 220px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  object-fit: cover;
+}
+
+.kartu-transport h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: var(--warna-teks);
+}
+
+.kartu-transport p {
+  padding: 0 15px 20px 15px;
+  font-size: 0.95rem;
+  color: var(--warna-mute);
+}
+/* ========== CAROUSEL/GALERI ========== */
+.title-galeri {
+  text-align: center;
+  font-family: playfair;
+  font-size: 3rem;
+  color: var(--warna-utama);
+  margin: 60px 0 30px 0;
+} 
+.item img {
+  width: 500px;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--warna-utama);
+  color: #fff;
+  font-family: manrope;
+  margin-top: 60px;
+}
+
+/* ========== RESPONSIVE: TABLET & PHONE (<768px) ========== */
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .bagian-hero {
+    height: 60vh;
+  }
+  .hero-judul {
+    font-size: 2.4rem;
+  }
+  .hero-subjudul {
+    font-size: 0.95rem;
+    padding: 0 20px;
+  }
+
+  /* PAGE TITLE */
+  .judul-halaman {
+    margin-top: 10vh;
+    line-height: normal;
+  }
+  .judul-halaman h3 {
+    font-size: 1rem;
+  }
+  .judul-destinasi {
+    font-size: 2.8rem;
+  }
+
+  /* INTRO SECTION */
+  .bagian-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 60px 8%;
+  }
+  .intro-teks {
+    order: 2;
+  }
+  .intro-gambar {
+    order: 1;
+  }
+  .intro-gambar img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* DESTINASI SECTION */
+  .bagian-destinasi {
+    padding: 60px 6%;
+  }
+  .judul-bagian {
+    font-size: 2.2rem;
+  }
+  .grid-destinasi {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .kartu-destinasi.lebar,
+  .kartu-destinasi.besar {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .judul-tempat {
+    font-size: 1.4rem;
+  }
+  .teks-deskripsi {
+    font-size: 0.9rem;
+  }
+
+  /* BUDAYA SECTION */
+  .bagian-budaya {
+    flex-direction: column;
+    padding: 60px 8%;
+    text-align: center;
+  }
+  .judul-budaya {
+    font-size: 2.4rem;
+  }
+  .teks-budaya {
+    text-align: justify;
+    font-size: 0.95rem;
+  }
+  .budaya-gambar img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* TRANSPORT SECTION */
+  .bagian-transport {
+    padding: 60px 6%;
+  }
+  .grid-transport {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .kartu-transport img {
+    height: 180px;
+  }
+  .judul-transport {
+    font-size: 1rem;
+  }
+  .kartu-transport p {
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+}
+
+/* ========== RESPONSIVE: PHONE SMALLER (<480px) ========== */
+@media (max-width: 480px) {
+  .hero-judul {
+    font-size: 2rem;
+  }
+  .hero-subjudul {
+    font-size: 0.85rem;
+  }
+  .judul-destinasi {
+    font-size: 2.2rem;
+  }
+  .judul-bagian {
+    font-size: 1.8rem;
+  }
+  .judul-budaya {
+    font-size: 2rem;
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
